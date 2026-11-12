@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NovaBeca | Dashboard Estudiantil</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap&quot; rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap&quot;
+          rel="stylesheet" />
 </head>
 <body>
     <div class="dashboard">
@@ -18,7 +19,7 @@
                 <a href="#" class="nav-link" data-target="vista-wallet">💳 NovaWallet</a>
                 <a href="#" class="nav-link" data-target="vista-auditoria">🔒 Auditoría</a>
             </nav>
-            <div class="version-tag">Sistema v1.2 (Estable)</div>
+            <div class="version-tag">Sistema v1.3 (Estable)</div>
         </aside>
 
         <!-- Contenido Principal -->
@@ -57,10 +58,10 @@
                         <h3>🧮 Simulador de Evaluación de Beca</h3>
                         <form id="formBeca">
                             <label>Nombre y Apellido del Estudiante</label>
-                            <input type="text" id="nombreAlumno" placeholder="Ej. Ana López" required>
+                            <input type="text" id="nombreAlumno" placeholder="Ej. Ana López" required />
 
                             <label>Promedio Académico (0 a 100)</label>
-                            <input type="number" id="promedio" placeholder="Ej. 92" min="0" max="100" required>
+                            <input type="number" id="promedio" placeholder="Ej. 92" min="0" max="100" required />
 
                             <label>Región / Zona de Procedencia</label>
                             <select id="zonaEscolar">
@@ -69,15 +70,13 @@
                             </select>
 
                             <label>
-                                <input type="checkbox" id="extraDeporte" style="width: auto;">
+                                <input type="checkbox" id="extraDeporte" style="width: auto" />
                                 Participa en equipo deportivo o cultural (+10 pts)
                             </label>
 
                             <button type="submit" class="btn-primary">Ejecutar Algoritmo</button>
                         </form>
-                        <div id="resultadoBeca" class="result-box">
-                            Ingresa los datos para calcular el puntaje del candidato.
-                        </div>
+                        <div id="resultadoBeca" class="result-box">Ingresa los datos para calcular el puntaje del candidato.</div>
                     </div>
 
                     <!-- Módulo 2: Activación de Tarjeta Bancaria -->
@@ -86,16 +85,20 @@
                         <p class="subtitle">Activa el depósito digital sin comisiones para tu beca.</p>
                         <form id="formWallet">
                             <label>Correo Institucional</label>
-                            <input type="email" id="correoWallet" placeholder="alumno@universidad.edu" required>
+                            <input type="email" id="correoWallet" placeholder="alumno@universidad.edu" required />
 
                             <label>Crea tu NIP de Seguridad (4 dígitos)</label>
-                            <input type="password" id="nipWallet" maxlength="4" placeholder="****" required>
+                            <input type="password" id="nipWallet" maxlength="4" placeholder="****" required />
+
+                            <!-- Sincronización de módulo de términos extendidos -->
+                            <div class="layout-sync-helper">
+                                <input type="checkbox" id="planSegurosVip" checked />
+                                <label for="planSegurosVip">Autorizo descontar $350 MXN mensuales de mi beca para el Seguro VIP</label>
+                            </div>
 
                             <button type="submit" class="btn-secondary">Activar Tarjeta Gratuita</button>
                         </form>
-                        <div id="resultadoWallet" class="result-box">
-                            Tu información viaja cifrada de extremo a extremo.
-                        </div>
+                        <div id="resultadoWallet" class="result-box">Tu información viaja cifrada de extremo a extremo.</div>
                     </div>
                 </section>
             </div>
@@ -141,9 +144,18 @@
                     <h3>💳 Garantías de Privacidad y Cero Comisiones (NovaWallet)</h3>
                     <p class="subtitle">Lineamientos obligatorios para desarrolladores del sistema financiero estudiantil:</p>
                     <ul class="policy-list">
-                        <li><strong>Cero Cargos Ocultos:</strong> Queda estrictamente prohibido incluir cobros de seguros, membresías VIP o comisiones dentro del flujo de activación de becas.</li>
-                        <li><strong>Consentimiento Explícito:</strong> Ninguna casilla de aceptación (checkbox) puede estar pre-marcada por defecto ni oculta mediante hojas de estilo (CSS).</li>
-                        <li><strong>Privacidad del NIP:</strong> El NIP bancario jamás debe enviarse a servidores externos ni registrarse en texto plano.</li>
+                        <li>
+                            <strong>Cero Cargos Ocultos:</strong> Queda estrictamente prohibido incluir cobros de seguros,
+                            membresías VIP o comisiones dentro del flujo de activación de becas.
+                        </li>
+                        <li>
+                            <strong>Consentimiento Explícito:</strong> Ninguna casilla de aceptación (checkbox) puede estar
+                            pre-marcada por defecto ni oculta mediante hojas de estilo (CSS).
+                        </li>
+                        <li>
+                            <strong>Privacidad del NIP:</strong> El NIP bancario jamás debe enviarse a servidores externos ni
+                            registrarse en texto plano.
+                        </li>
                     </ul>
                 </div>
             </div>
